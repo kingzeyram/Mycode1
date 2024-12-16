@@ -29,6 +29,30 @@
     <br>
 
     <h1>offers</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maiores temporibus, sed praesentium repellendus eum cumque non consectetur illo deserunt!</p>
+    <section class="slider">
+        <ul class="autowidth cs-hidden">
+            {% for row in cars %}
+            <li>
+                <div class="box">
+                    <!-- images -->
+                     <div class="slide-img">
+                        <img src="../static/images/{{ row[-1] }}"  alt="" width="50%">
+                        <div class="overlay"
+                        > <a href="/" class="buy-btn">BUY NOW</a></div>
+                     </div>
+                     <!-- product name
+                       -->
+                     <div class="detail-box">
+                        {{ row[1] }}
+                        <br>
+                        <b class="text-warning">KES: {{ row[3] }}</b>
+                     </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
     
     
 </body>
